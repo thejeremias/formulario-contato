@@ -1,2 +1,2 @@
 # formularioContato
-Um formulário de contato web construído com HTML, CSS e PHP.
+Um formulário de contato construído com HTML, CSS, JS e PHP.
