@@ -25,6 +25,7 @@
             <div class="row">
                 <div class="col s12"> 
                     <h1 class="center-align">Formulário de Contato</h1>
+                    <p class="center-align">Entre em contato comigo por aqui.</p>
                 </div>
             </div>
        
@@ -34,13 +35,13 @@
 
              
 
-                <form class="col s12" method="POST" action="/">
+                <form id="form" class="col s12" method="POST" action="/processamento.php">
 
 
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="input_text" type="text" data-length="10" required="true" />
+                            <input name="nome" id="input_text" type="text" data-length="10" required="true" />
                             <label for="input_text">Nome</label>
                         </div>
                     </div>
@@ -48,7 +49,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">alternate_email</i>
-                            <input id="email" type="email" class="validate" required="true" />
+                            <input name="email" id="email" type="email" class="validate" required="true" />
                             <label for="email">E-mail</label>
                         </div>
                     </div>
@@ -56,7 +57,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">subject</i>
-                            <input id="input_text" type="text" data-length="10" required="true" />
+                            <input name="assunto" id="input_text" type="text" data-length="10" required="true" />
                             <label for="input_text">Assunto</label>
                         </div>
                     </div>
@@ -64,7 +65,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">message</i>
-                            <textarea id="textarea1" class="materialize-textarea" required="true"></textarea>
+                            <textarea name="mensagem" id="textarea1" class="materialize-textarea" required="true"></textarea>
                             <label for="textarea1">Mensagem</label>
                         </div>
                     </div>
@@ -75,8 +76,7 @@
                         <div class="col s12">
                             
 
-                            <button class="btn waves-effect waves-light" type="submit" name="action">
-                                Enviar
+                            <button class="btn waves-effect waves-light" name="action" onclick="confirmar()">Enviar
                                 <i class="material-icons right">send</i>
                             </button>
         
@@ -113,5 +113,16 @@
 
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+
+            function confirmar() {
+            resposta = confirm("Tem certeza que quer enviar?");
+
+            if (confirm === true) {
+                document.getElementById('form').submit();
+            }
+        }
+
+        </script>
     </body>
 </html>
