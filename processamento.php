@@ -50,7 +50,7 @@
             ">
                 <div class="col s12"> 
                     <h1>Mensagem enviada! &#x1F91D; </h1>
-                    <a href="/index.html"> &#x1F449; Enviar outra?</a>
+                    <a href="/index.php"> &#x1F449; Enviar outra?</a>
                 </div>
             </div>
        
