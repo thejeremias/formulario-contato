@@ -4,6 +4,9 @@
     $assunto = addslashes($_POST['assunto']);
     $mensagem = addslashes($_POST['mensagem']);
 
+    
+    if (isset($email) && !empty($email)) {
+
     $to = "saldanhajeremias295@gmail.com";
     $subject = "Contato - Jeremias Codes";
     $body = "nome: " . $nome . "\r\n" .
@@ -15,6 +18,13 @@
                "x=mailer:PHP/" . phpversion();  
 
     mail($to, $subject, $body, $header)
+    
+    } else {
+        echo "<script> 
+                    document.location = "/";
+        </script>";
+    }
+
 ?>
 
 <!DOCTYPE html>
