@@ -17,11 +17,11 @@
                "Reply-To:" . $email . "\r\n" .
                "x=mailer:PHP/" . phpversion();  
 
-    mail($to, $subject, $body, $header)
+    mail($to, $subject, $body, $header);
     
     } else {
         echo "<script> 
-                    document.location = "/";
+                    document.location = '/'
         </script>";
     }
 

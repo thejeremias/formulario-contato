@@ -115,13 +115,36 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
 
+
+            if (document.getElementByName('nome').value == '' OR
+                document.getElementByName('assunto').value == '' OR
+                document.getElementByName('mensagem').value == '') {
+
+
+
+            } else {
+
+            }
+
+
+  
+
+
             function confirmar() {
+        
             resposta = confirm("Tem certeza que quer enviar?");
 
-            if (confirm === true) {
+        
+            if (resposta == true) {
                 document.getElementById('form').submit();
             }
-        }
+
+
+            submit = document.getElementById()
+            
+
+
+         }
 
         </script>
     </body>
