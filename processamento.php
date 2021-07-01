@@ -20,9 +20,8 @@
     mail($to, $subject, $body, $header);
     
     } else {
-        echo "<script> 
-                    document.location = '/'
-        </script>";
+        header("location: index.php");
+        die("Preencha o formulário antes.");
     }
 
 ?>
