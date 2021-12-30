@@ -7,13 +7,13 @@
     
     if (isset($email) && !empty($email)) {
 
-    $to = "saldanhajeremias295@gmail.com";
-    $subject = "Contato - Jeremias Codes";
+    $to = "";
+    $subject = "Contato";
     $body = "nome: " . $nome . "\r\n" .
             "e-mail: " . $email . "\r\n" .
             "assunto:" . $assunto . "\r\n" .
             "mensagem:" . $mensagem;
-    $header = "From:contato@jeremias.codes" . "\r\n" .
+    $header = "From:" . "\r\n" .
                "Reply-To:" . $email . "\r\n" .
                "x=mailer:PHP/" . phpversion();  
 
